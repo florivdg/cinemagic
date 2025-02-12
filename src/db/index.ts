@@ -8,7 +8,9 @@ db.run(`
   CREATE TABLE IF NOT EXISTS items (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
-    type TEXT CHECK(type IN ('movie', 'tv_series')) NOT NULL
+    type TEXT CHECK(type IN ('movie', 'tv_series')) NOT NULL,
+    url TEXT,
+    original_id INTEGER
   )
 `)
 
